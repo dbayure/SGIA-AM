@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SGIA-AM</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_vista_placa">VistaPlaca</string>
+    <string name="imagenPlaca">Imagen Placa</string>
+    <string name="tituloPlaca">Titulo</string>
+    <string name="descripcionPlaca">Descripcion_aa</string>
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
+    <string name="dispositivos">estado dispositivos</string>
+    <string name="lecturas">lecturas obtenidas</string>
+    <string name="acciones">acciones disparadas</string>
+    <string name="logs">log de eventos</string>
+    <string name="factores">factores del sistema</string>
+    <string name="estadoplaca">Estado de la placa: </string>
+    <string name="title_activity_salir_toast">SalirToast</string>
+    <string name="MsgSalir">Salir</string>
+    <string name="BtnSalir">BtnSalir</string>
+    <string name="title_activity_factores">Factores</string>
+    <string name="title_activity_dispositivos">Dispositivos</string>
+    <string name="title_activity_lecturas">Lecturas</string>
+    <string name="title_activity_acciones">Acciones</string>
+    <string name="title_activity_logs">Logs</string>
+    <string name="title_activity_detalle_log">Detalle Log de Evento</string>
+    <string name="urlWS">http://192.168.1.46:8080/SGIA-web/sgia_AC_ws?wsdl</string>
+    <string name="namespace">http://sgiaAC/</string>
+    <string name="ws_listaLogEventos">wsObtenerListaLogEventos</string>
+    <string name="ws_estadosPlaca">wsObtenerEstadosPlaca</string>
+    <string name="ws_listaAcciones">wsObtenerListaAcciones</string>
+    <string name="ws_listaPlacas">wsObtenerListaPlacas</string>
+    <string name="ws_listaLecturas">wsObtenerListaLecturas</string>
+    <string name="ws_listaFactores">wsObtenerListaFactores</string>
+    <string name="ws_listaGrupoActuadores">wsObtenerListaGrupoActuadores</string>
+    <string name="etiqUnidad">Unidad: </string>
+    <string name="unidadFactor">unidad</string>
+    <string name="nombreFactor">nombreFactor</string>
+    <string name="limitesFactor">min:  - max:  </string>
+    <string name="lecturaFecha">Fecha</string>
+    <string name="lecturaHora">Hora</string>
+    <string name="lecturaValor">Valor</string>
+    <string name="nombreDispositivo">nombre dispositivo</string>
+    <string name="modeloDispositivo">modelo dispositivo</string>
+    <string name="fechaAccion">fecha</string>
+    <string name="horaAccion">hora</string>
+    <string name="tipoAccion">accion</string>
+    <string name="nombreTipoLog">nombre tipo log</string>
+    <string name="fechaHoraLog">fecha y hora del log</string>
+    <string name="detalles">Ver Detalles</string>
+    <string name="smsMailTipoLog">SMS?: Si/No Mail: Si/No</string>
+    <string name="tituloMensaje">Mensaje</string>
+    <string name="textoMensaje">Texto mensaje</string>
+    <string name="tituloDispositivo">Dispositivo</string>
+    <string name="title_activity_grupos_actuadores">Grupos Actuadores</string>
+    <string name="nombreGrupoActuadores">Nombre Grupo Actuadores</string>
+    <string name="estadoGrupoActuadores">Estado</string>
+    <string name="grupoActuadores">Grupo Actuadores</string>
+    <string name="title_activity_estado_placa">EstadoPlaca</string>
+    <string name="dispNombre">Nombre Dispositivo</string>
+    <string name="dispModelo">Modelo Dispositivo</string>
+    <string name="imagenAlertaDispositivo">Imagen Alerta Dispositivo</string>
+    <string name="SeriePlaca">Serie Placa :</string>
+    <string name="estadoAlertaPlaca">Estado Alerta :</string>
+    <string name="ws_listaDispositivos">wsObtenerListaDispositivos</string>
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uy.com.ceoyphoibe.sgia_am"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="uy.com.ceoyphoibe.sgia_am.controladores.VariablesGlobales"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.SeleccionPlaca"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.VistaPlaca"
+            android:label="@string/title_activity_vista_placa" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.EstadoPlaca"
+            android:label="@string/title_activity_estado_placa" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.DetalleLog"
+            android:label="@string/title_activity_detalle_log" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.MenuPrincipal"
+            android:label="@string/title_activity_menu_principal" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.SalirToast"
+            android:label="@string/title_activity_salir_toast" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.Factores"
+            android:label="@string/title_activity_factores" >
+        </activity>
+        <activity
+  			android:name="uy.com.ceoyphoibe.sgia_am.controladores.Dispositivos"
+            android:label="@string/title_activity_dispositivos" >
+        </activity>
+        <activity
+  			android:name="uy.com.ceoyphoibe.sgia_am.controladores.Lecturas"
+            android:label="@string/title_activity_lecturas" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.Acciones"
+            android:label="@string/title_activity_acciones" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.Logs"
+            android:label="@string/title_activity_logs" >
+        </activity>
+        <activity
+            android:name="uy.com.ceoyphoibe.sgia_am.controladores.GruposActuadores"
+            android:label="@string/title_activity_grupos_actuadores" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,157 @@
+<ScrollView 
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/scroll" 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content" >
+<!--       tools:context="uy.com.ceoyphoibe.sgia_am.DetalleLog" -->
+<!--     	tools:ignore="MergeRootFrame"> -->
+<!--     xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     xmlns:tools="http://schemas.android.com/tools" -->
+<LinearLayout 
+
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="horizontal|vertical"
+     >
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/rounded_layout"
+	        android:gravity="center"
+	        android:padding="@dimen/activity_horizontal_margin" >
+	
+	        <ImageView
+	            android:id="@+id/imageView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:contentDescription="@string/fechaHoraLog"
+	            android:src="@drawable/reloj" />
+	
+	        <TextView
+	            android:id="@+id/detLog_fechaHora"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="8"
+	            android:gravity="center"
+	            android:text="@string/fechaHoraLog"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	    </LinearLayout>
+	    
+	    <Space
+	        android:layout_width="match_parent"
+	        android:layout_height="15dp" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/rounded_layout"
+	        android:gravity="center"
+	        android:padding="@dimen/activity_horizontal_margin" >
+	
+	        <ImageView
+	            android:id="@+id/imageViewGrupoActuador"
+	            android:layout_width="wrap_content"
+	            android:layout_height="70dp"
+	            android:layout_weight="2"
+	            android:src="@drawable/logevento" 
+	            android:contentDescription="@string/logs" />
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="8"
+	            android:gravity="center"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:id="@+id/detLog_nombreTipoLog"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:text="@string/nombreTipoLog"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <TextView
+	                android:id="@+id/detLog_smsMail"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:text="@string/smsMailTipoLog"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	        </LinearLayout>
+	
+	    </LinearLayout>
+	
+	    <Space
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/rounded_layout"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:padding="@dimen/activity_horizontal_margin" >
+	
+	        <TextView
+	            android:id="@+id/tituloMensaje"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tituloMensaje"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <TextView
+	            android:id="@+id/detLog_textoMensaje"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/textoMensaje"
+	            android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	    </LinearLayout>
+	    
+	    <Space
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/rounded_layout"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:padding="@dimen/activity_horizontal_margin" >
+	
+	        <TextView
+	            android:id="@+id/tituloDispositivo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tituloDispositivo"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <TextView
+	            android:id="@+id/detLog_nombreDispositivo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/nombreDispositivo"
+	            android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	        <TextView
+	            android:id="@+id/detLog_modeloDispositivo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/modeloDispositivo"
+	            android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	    </LinearLayout>
+	
+</LinearLayout>
+ </ScrollView>
