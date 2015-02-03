@@ -16,13 +16,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase MenuPrincipal controla el activity del menu principal de la aplicación
+ *
+ */
 public class MenuPrincipal extends Activity {
 	private ListView lista;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_menu_principal);
-
+		//obtiene la lista de opciones
 		ArrayList<ListaOpciones> opciones = new ArrayList<ListaOpciones>();
 		opciones.add(new ListaOpciones(R.drawable.lupa, "Estado Placa", "Estado del sistema y de alerta"));
 		opciones.add(new ListaOpciones(R.drawable.dispositivo, "Estado Dispositivos", "Estado alerta de los dispositivos"));
@@ -30,7 +34,7 @@ public class MenuPrincipal extends Activity {
 		opciones.add(new ListaOpciones(R.drawable.grupo_actuadores, "Grupos Actuadores", "Estado de Grupos de Actuadores"));
 		opciones.add(new ListaOpciones(R.drawable.acciones, "Acciones", "Últimas acciones disparadas"));
 		opciones.add(new ListaOpciones(R.drawable.logevento, "Logs de Eventos", "Últimos log de eventos"));
-		
+		//carga en la vista la lista de opciones
 		lista = (ListView) findViewById(R.id.listViewMenuPrincipal);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_menu_principal, opciones) {
 		@Override
@@ -48,6 +52,7 @@ public class MenuPrincipal extends Activity {
 				}
 			}
 		});
+		//asigna la acción a disparar ante la selección de uno de los objetos de la lista pertenecientes al menu
 		lista.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
         

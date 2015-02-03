@@ -11,19 +11,18 @@ import org.xmlpull.v1.XmlPullParserException;
 import uy.com.ceoyphoibe.sgia_am.model.EstadosPlaca_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_estadosPlaca es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene los estados de la placa
+ */
 public class WS_estadosPlaca extends AsyncTask<Long, Void, EstadosPlaca_AM> {
 
 	private String NAMESPACE = null;
 	private String URL = null;
 	private String METHOD_NAME = null;
 	private String SOAP_ACTION = null;
-
 	private SoapObject request = null;
 	private SoapSerializationEnvelope envelope = null;
-
 	private SoapObject resultsRequestSOAP = null;
-	
-	
 
 	public WS_estadosPlaca(String nAMESPACE, String uRL, String mETHOD_NAME) {
 		super();
@@ -53,11 +52,9 @@ public class WS_estadosPlaca extends AsyncTask<Long, Void, EstadosPlaca_AM> {
         	estados.setEstadoSistema(estado);
         	estados.setEstadoAlerta(alerta);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Error");
 			e.printStackTrace();
 		} catch (XmlPullParserException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Error");
 			e.printStackTrace();
 		}

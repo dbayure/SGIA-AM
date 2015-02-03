@@ -22,6 +22,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase SeleccionPlaca controla el activity que despliega la lista de placas controladores disponibles a seleccionar
+ */
 public class SeleccionPlaca extends Activity {
 	private ListView lista;
 	List<Placa_AM> listaPlacas = new ArrayList<Placa_AM>();
@@ -34,6 +37,7 @@ public class SeleccionPlaca extends Activity {
 			getFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		//obtiene la lista de placas mediante el ws
 		ArrayList<ListaPlacas> datos = new ArrayList<ListaPlacas>();
 		String namespace= getString(R.string.namespace);
 	    String url= getString(R.string.urlWS);
@@ -42,6 +46,7 @@ public class SeleccionPlaca extends Activity {
 		try {
 			listaPlacas = tarea.execute().get();
 			for (Placa_AM p : listaPlacas) {
+				//a partir de la lista obtenida carga la lista de datos para pasar a la vista
 				datos.add(new ListaPlacas(R.drawable.placa, p.getDescripcion(), p.getNroSerie()));
 			}
 		} catch (InterruptedException e) {
@@ -49,6 +54,7 @@ public class SeleccionPlaca extends Activity {
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
+		//carga la lista de datos en la vista
 		lista = (ListView) findViewById(R.id.listViewPlacas);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_vista_placa, datos) {
 		@Override
@@ -68,10 +74,11 @@ public class SeleccionPlaca extends Activity {
 		});
 		lista.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-        
+            //ante la selección de un objeto de la lista, asigna la placa seleccionada como variable global
             Placa_AM placaSeleccionada= listaPlacas.get(position);
             final VariablesGlobales variables= (VariablesGlobales) getApplicationContext();
             variables.setPlaca(placaSeleccionada);
+            //inicia el activity del menu principal
          	Intent newActivity0 = new Intent(SeleccionPlaca.this,MenuPrincipal.class);     
         	startActivity(newActivity0);
         }
@@ -93,9 +100,6 @@ public class SeleccionPlaca extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
 	public static class PlaceholderFragment extends Fragment {
 		public PlaceholderFragment() {
 		}

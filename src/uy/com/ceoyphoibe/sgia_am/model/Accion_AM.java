@@ -2,13 +2,11 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 /**
- * Clase de apoyo utilizada para pasaje de datos de factores con los servicios web a consumir en la aplicación móvil
+ * La clase Accion_AM contiene la información relativa a una acción disparada por la placa controladora
  */
 public class Accion_AM implements Serializable {
 
-
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private String fechaHora;
 	private String tipoAccion;
 	private Dispositivo_AM dispositivo;
@@ -30,45 +28,44 @@ public class Accion_AM implements Serializable {
 	}
 
 	/**
-	 * @return the fechaHora
+	 * @return la fecha y hora en la que se produjo la acción
 	 */
 	public String getFechaHora() {
 		return fechaHora;
 	}
 
 	/**
-	 * @param fechaHora the fechaHora to set
+	 * @param fechaHora 
 	 */
 	public void setFechaHora(String fechaHora) {
 		this.fechaHora = fechaHora;
 	}
 
 	/**
-	 * @return the tipoAccion
+	 * @return el tipo de acción que se produjo
 	 */
 	public String getTipoAccion() {
 		return tipoAccion;
 	}
 
 	/**
-	 * @param tipoAccion the tipoAccion to set
+	 * @param tipoAccion
 	 */
 	public void setTipoAccion(String tipoAccion) {
 		this.tipoAccion = tipoAccion;
 	}
 
 	/**
-	 * @return the dispositivo
+	 * @return el dispositivo sobre el que se disparó la acción
 	 */
 	public Dispositivo_AM getDispositivo() {
 		return dispositivo;
 	}
 
 	/**
-	 * @param dispositivo the dispositivo to set
+	 * @param dispositivo
 	 */
 	public void setDispositivo(Dispositivo_AM dispositivo) {
 		this.dispositivo = dispositivo;
 	}
-
 }

@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaPlacas permite cargar los datos de una Placa para pasarlos en una lista a la vista
+ */
 public class ListaPlacas {
 	
 	private int imagenPlaca; 

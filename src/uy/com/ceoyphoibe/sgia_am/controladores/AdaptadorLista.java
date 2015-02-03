@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+
+/**
+ * La clase AdaptadorLista permite cargar una lista de datos en un listView perteneciente a la vista
+ *
+ */
 public abstract class AdaptadorLista extends BaseAdapter{
 	
 	private ArrayList<?> entradas; 

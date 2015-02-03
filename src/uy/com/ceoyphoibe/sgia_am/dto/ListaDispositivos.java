@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaDispositivos permite cargar los datos de un Dispositivo para pasarlos en una lista a la vista
+ */
 public class ListaDispositivos {
 	
 	private int imagenEstado; 

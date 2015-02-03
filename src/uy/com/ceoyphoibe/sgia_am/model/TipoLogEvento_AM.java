@@ -2,25 +2,18 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 /**
- * Clase de apoyo utilizada para pasaje de datos de tipos de log de eventos con los servicios web a consumir en la aplicación móvil
+ * La clase TipoLogEvento_AM contiene los parámetros relativos a un tipo de log de eventos
  */
 public class TipoLogEvento_AM implements Serializable {
 
-
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private Long idTipoLogEventos;
 	private String nombre;
 	private String enviarSMS;
 	private String enviarMail;
 	
-	
-	
 	public TipoLogEvento_AM() {
-		
 	}
-
-
 
 	/**
 	 * @param idTipoLogEventos
@@ -36,78 +29,59 @@ public class TipoLogEvento_AM implements Serializable {
 		this.enviarMail = enviarMail;
 	}
 
-
-
 	/**
-	 * @return the idTipoLogEventos
+	 * @return el identificador del tipo de log de eventos
 	 */
 	public Long getIdTipoLogEventos() {
 		return idTipoLogEventos;
 	}
 
-
-
 	/**
-	 * @param idTipoLogEventos the idTipoLogEventos to set
+	 * @param idTipoLogEventos
 	 */
 	public void setIdTipoLogEventos(Long idTipoLogEventos) {
 		this.idTipoLogEventos = idTipoLogEventos;
 	}
 
-
-
 	/**
-	 * @return the nombre
+	 * @return el nombre del tipo de log de eventos
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 
-
-
 	/**
-	 * @param nombre the nombre to set
+	 * @param nombre
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-
-
 	/**
-	 * @return the enviarSMS
+	 * @return el indicador si corresponde enviar notificación por SMS
 	 */
 	public String getEnviarSMS() {
 		return enviarSMS;
 	}
 
-
-
 	/**
-	 * @param enviarSMS the enviarSMS to set
+	 * @param enviarSMS
 	 */
 	public void setEnviarSMS(String enviarSMS) {
 		this.enviarSMS = enviarSMS;
 	}
 
-
-
 	/**
-	 * @return the enviarMail
+	 * @return el indicador si corresponde enviar notificación por Mail
 	 */
 	public String getEnviarMail() {
 		return enviarMail;
 	}
 
-
-
 	/**
-	 * @param enviarMail the enviarMail to set
+	 * @param enviarMail
 	 */
 	public void setEnviarMail(String enviarMail) {
 		this.enviarMail = enviarMail;
 	}
-
-	
-
 }

@@ -14,6 +14,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import uy.com.ceoyphoibe.sgia_am.model.Dispositivo_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaDispositivos es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de dispositivos
+ */
 public class WS_listaDispositivos extends AsyncTask<Long, Void, List<Dispositivo_AM>> {
 
 	private String NAMESPACE = null;

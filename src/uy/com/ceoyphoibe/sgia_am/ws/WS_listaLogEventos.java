@@ -11,12 +11,15 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
-import uy.com.ceoyphoibe.sgia_am.controladores.Mensaje;
 import uy.com.ceoyphoibe.sgia_am.model.Dispositivo_AM;
 import uy.com.ceoyphoibe.sgia_am.model.LogEvento_AM;
+import uy.com.ceoyphoibe.sgia_am.model.Mensaje;
 import uy.com.ceoyphoibe.sgia_am.model.TipoLogEvento_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaLogEventos es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de los últimos diez log de eventos disparados
+ */
 public class WS_listaLogEventos extends AsyncTask<Long, Void, List<LogEvento_AM>> {
 
 	private String NAMESPACE = null;

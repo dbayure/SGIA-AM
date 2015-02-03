@@ -23,7 +23,7 @@
     <string name="title_activity_acciones">Acciones</string>
     <string name="title_activity_logs">Logs</string>
     <string name="title_activity_detalle_log">Detalle Log de Evento</string>
-    <string name="urlWS">http://192.168.1.46:8080/SGIA-web/sgia_AC_ws?wsdl</string>
+    <string name="urlWS">http://192.168.137.71:8080/SGIA-web/sgia_AC_ws?wsdl</string>
     <string name="namespace">http://sgiaAC/</string>
     <string name="ws_listaLogEventos">wsObtenerListaLogEventos</string>
     <string name="ws_estadosPlaca">wsObtenerEstadosPlaca</string>

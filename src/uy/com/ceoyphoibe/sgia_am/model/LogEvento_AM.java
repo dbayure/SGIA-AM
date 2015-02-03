@@ -2,30 +2,21 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 
-import uy.com.ceoyphoibe.sgia_am.controladores.Mensaje;
-
-
 /**
- * Clase de apoyo utilizada para pasaje de datos de tipos de log de eventos con los servicios web a consumir en la aplicación móvil
+ * La clase LogEvento_AM contiene los parámetros pertenecientes a un log de evento generado
  */
 public class LogEvento_AM implements Serializable {
 
 
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private Long idLogEvento;
 	private String fechaHora;
 	private Mensaje mensaje;
 	private TipoLogEvento_AM tipoLog;
 	private Dispositivo_AM dispositivo;
 	
-	
-	
 	public LogEvento_AM() {
-		
 	}
-
-
 
 	/**
 	 * @param idLogEvento
@@ -42,95 +33,73 @@ public class LogEvento_AM implements Serializable {
 		this.dispositivo=dispositivo;
 	}
 
-
-
 	/**
-	 * @return the idLogEvento
+	 * @return el identificador del log de evento
 	 */
 	public Long getIdLogEvento() {
 		return idLogEvento;
 	}
 
-
-
 	/**
-	 * @param idLogEvento the idLogEvento to set
+	 * @param idLogEvento
 	 */
 	public void setIdLogEvento(Long idLogEvento) {
 		this.idLogEvento = idLogEvento;
 	}
 
-
-
 	/**
-	 * @return the fechaHora
+	 * @return la fecha y hora en la que se produjo el log de evento
 	 */
 	public String getFechaHora() {
 		return fechaHora;
 	}
 
-
-
 	/**
-	 * @param fechaHora the fechaHora to set
+	 * @param fechaHora
 	 */
 	public void setFechaHora(String fechaHora) {
 		this.fechaHora = fechaHora;
 	}
 
-
-
 	/**
-	 * @return the mensaje
+	 * @return el mensaje asociado al log de evento
 	 */
 	public Mensaje getMensaje() {
 		return mensaje;
 	}
 
-
-
 	/**
-	 * @param mensaje the mensaje to set
+	 * @param mensaje
 	 */
 	public void setMensaje(Mensaje mensaje) {
 		this.mensaje = mensaje;
 	}
 
-
-
 	/**
-	 * @return the tipoLog
+	 * @return el tipo de log de evento al que pertenece el log de evento
 	 */
 	public TipoLogEvento_AM getTipoLog() {
 		return tipoLog;
 	}
 
-
-
 	/**
-	 * @param tipoLog the tipoLog to set
+	 * @param tipoLog
 	 */
 	public void setTipoLog(TipoLogEvento_AM tipoLog) {
 		this.tipoLog = tipoLog;
 	}
 
-
-
 	/**
-	 * @return the dispositivo
+	 * @return el dispositivo que generó el log de evento
 	 */
 	public Dispositivo_AM getDispositivo() {
 		return dispositivo;
 	}
 
-
-
 	/**
-	 * @param dispositivo the dispositivo to set
+	 * @param dispositivo
 	 */
 	public void setDispositivo(Dispositivo_AM dispositivo) {
 		this.dispositivo = dispositivo;
 	}
-
-	
 }

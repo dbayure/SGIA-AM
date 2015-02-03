@@ -14,6 +14,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import uy.com.ceoyphoibe.sgia_am.model.Lectura_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaLecturas es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de las últimas diez lecturas de un factor
+ */
 public class WS_listaLecturas extends AsyncTask<Long, Void, List<Lectura_AM>> {
 
 	private String NAMESPACE = null;

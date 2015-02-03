@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaLogs permite cargar los datos de un Log para pasarlos en una lista a la vista
+ */
 public class ListaLogs {
 	
 	private String nombreTipoLog; 

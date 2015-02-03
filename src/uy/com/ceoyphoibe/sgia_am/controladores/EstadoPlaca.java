@@ -11,15 +11,19 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * La clase EstadoPlaca controla el activity para mostrar el detalle y estados de la placa controladora seleccionada
+ */
 public class EstadoPlaca extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_estado_placa);
-		
 		final VariablesGlobales variables= (VariablesGlobales) getApplicationContext();
+		//obtiene la placa seleccionada guardada como variable global
 		Placa_AM placa = variables.getPlaca();
+		//obtiene sus atributos y asigna a los elementos correspondientes de la vista
 		TextView descripcion = (TextView) this.findViewById(R.id.DescripcionPlaca);
 		descripcion.setText(placa.getDescripcion());
 		descripcion.setTypeface(null, Typeface.BOLD_ITALIC);
@@ -46,7 +50,6 @@ public class EstadoPlaca extends Activity {
 				}
 			}
 		}
-				
 		TextView alerta = (TextView) this.findViewById(R.id.Alerta);
 		if (placa.getEstadoAlerta().equals("S")){
 			alerta.setText("SI");

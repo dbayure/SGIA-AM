@@ -2,18 +2,15 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 /**
- * Clase de apoyo utilizada para pasaje de datos de lecturas pertenecientes a un factor con los servicios web a consumir en la aplicación móvil
+ * La clase Lectura_AM contiene los parámetros pertenecientes a una lectura de un factor perteneciente a la placa controladora
  */
 public class Lectura_AM implements Serializable {
 
-
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private String fechaHora;
 	private float valor;
 	
 	public Lectura_AM() {
-		
 	}
 
 	/**
@@ -26,33 +23,30 @@ public class Lectura_AM implements Serializable {
 	}
 
 	/**
-	 * @return the fechaHora
+	 * @return la fecha y hora en la que se produjo la lectura
 	 */
 	public String getFechaHora() {
 		return fechaHora;
 	}
 
 	/**
-	 * @param fechaHora the fechaHora to set
+	 * @param fechaHora
 	 */
 	public void setFechaHora(String fechaHora) {
 		this.fechaHora = fechaHora;
 	}
 
 	/**
-	 * @return the valor
+	 * @return el valor obtenido en la lectura
 	 */
 	public float getValor() {
 		return valor;
 	}
 
 	/**
-	 * @param valor the valor to set
+	 * @param valor
 	 */
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
-
-	
-	
 }

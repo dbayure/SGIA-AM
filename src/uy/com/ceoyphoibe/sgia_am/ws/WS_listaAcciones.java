@@ -15,6 +15,9 @@ import uy.com.ceoyphoibe.sgia_am.model.Accion_AM;
 import uy.com.ceoyphoibe.sgia_am.model.Dispositivo_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaAcciones es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista con las últimas diez acciones disparadas
+ */
 public class WS_listaAcciones extends AsyncTask<Long, Void, List<Accion_AM>> {
 
 	private String NAMESPACE = null;

@@ -16,6 +16,11 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+/**
+ * La clase Acciones controla el activity que muestra la lista de las últimas diez acciones disparadas en la placa controladora seleccionada
+ *
+ */
 public class Acciones extends Activity {
 	
 	private ListView lista;
@@ -34,9 +39,10 @@ public class Acciones extends Activity {
 	    String method= getString(R.string.ws_listaAcciones);
 	    WS_listaAcciones tarea = new WS_listaAcciones(namespace, url, method);
 	    try {
+	    	//obtiene el id de la placa seleccionada guardada como variable global
 	    	Long idPlaca= variables.getPlaca().getId();
 	    	
-	    	
+	    	//obtiene la lista de acciones mediante el WS
 	    	listaAcciones = tarea.execute(idPlaca).get();
 			for (Accion_AM a: listaAcciones)
 			{
@@ -51,16 +57,16 @@ public class Acciones extends Activity {
 					accion= "Posición #"+a.getTipoAccion();
 				String nombreDispositivo= a.getDispositivo().getNombre();
 				String modeloDispositivo= a.getDispositivo().getModelo();
+				//a partir de la lista obtenida completa la lista de datos para pasar a la vista
 				ListaAcciones temp= new ListaAcciones(fecha, hora, accion, nombreDispositivo, modeloDispositivo);
 				datos.add(temp);
 			}
-	    	
 		} catch (InterruptedException e) {
 			((Throwable) e).printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
-	    
+	    //asigna la lista de datos a la vista
 	    lista= (ListView) findViewById(R.id.listViewAcciones);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_acciones, datos) {
 		@Override

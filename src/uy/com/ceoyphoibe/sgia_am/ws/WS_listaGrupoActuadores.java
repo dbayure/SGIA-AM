@@ -14,6 +14,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import uy.com.ceoyphoibe.sgia_am.model.GrupoActuador_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaGrupoActuadores es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de grupo de actuadores
+ */
 public class WS_listaGrupoActuadores extends AsyncTask<Long, Void, List<GrupoActuador_AM>> {
 
 	private String NAMESPACE = null;

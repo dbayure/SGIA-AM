@@ -16,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase Dispositivos controla el activity para mostrar la lista de dispositivos y su respectivo estado de alerta
+ */
 public class Dispositivos extends Activity {
 	private ListView lista;
 	List<Dispositivo_AM> dispositivos = new ArrayList<Dispositivo_AM>();
@@ -24,8 +27,7 @@ public class Dispositivos extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dispositivos);
-
-		
+		//obtiene la lista de dispositivos desde el ws
 		ArrayList<ListaDispositivos> datos = new ArrayList<ListaDispositivos>();
 		String namespace= getString(R.string.namespace);
 	    String url= getString(R.string.urlWS);
@@ -36,18 +38,18 @@ public class Dispositivos extends Activity {
 	    	Long idPlaca= variables.getPlaca().getId();
 			dispositivos = tarea.execute(idPlaca).get();
 			for (Dispositivo_AM d : dispositivos) {
+				//a partir de la lista obtenida carga la lista de datos para pasar a la vista
 				if (d.getEstadoAlerta().equals("S"))
 					datos.add(new ListaDispositivos(R.drawable.alertadispositivo, d.getNombre(), d.getModelo()));
 				else
 					datos.add(new ListaDispositivos(R.drawable.dispestadok, d.getNombre(), d.getModelo()));
 			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			((Throwable) e).printStackTrace();
 		} catch (ExecutionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//carga la lista de datos en la vista
 		lista = (ListView) findViewById(R.id.listViewDispositivoAlerta);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_dispositivos, datos) {
 		@Override

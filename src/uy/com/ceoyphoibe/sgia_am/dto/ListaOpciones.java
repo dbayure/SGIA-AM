@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaOpciones permite cargar los datos de cada elemento del menu principal para pasarlos como una lista a la vista
+ */
 public class ListaOpciones {
 	
 	private int imagenOpcion; 

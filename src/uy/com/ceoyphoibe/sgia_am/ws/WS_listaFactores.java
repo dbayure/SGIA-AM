@@ -14,6 +14,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import uy.com.ceoyphoibe.sgia_am.model.Factor_AM;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_listaFactores es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de factores
+ */
 public class WS_listaFactores extends AsyncTask<Long, Void, List<Factor_AM>> {
 
 	private String NAMESPACE = null;

@@ -1,15 +1,15 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaAcciones permite cargar los datos de una Accion para pasarlos en una lista a la vista
+ */
 public class ListaAcciones {
-	
-	
+
 	private String fecha; 
 	private String hora; 
 	private String accion;
 	private String nombreDispositivo;
 	private String modeloDispositivo;
-	
-	
 
 	public ListaAcciones(String fecha, String hora, String accion,
 			String nombreDispositivo, String modeloDispositivo) {
@@ -60,5 +60,4 @@ public class ListaAcciones {
 	public void setModeloDispositivo(String modeloDispositivo) {
 		this.modeloDispositivo = modeloDispositivo;
 	}
-
 }

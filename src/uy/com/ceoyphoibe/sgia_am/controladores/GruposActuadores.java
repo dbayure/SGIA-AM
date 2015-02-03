@@ -16,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase GruposActuadores controla el activity para mostrar la lista de grupos de actuadores y su estado actual
+ */
 public class GruposActuadores extends Activity {
 	
 	private ListView lista;
@@ -25,7 +28,7 @@ public class GruposActuadores extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grupos_actuadores);
-
+		//obtiene la lista de grupos de actuadores mediante el ws
 		ArrayList<ListaGrupoActuadores> datos = new ArrayList<ListaGrupoActuadores>();
 		String namespace= getString(R.string.namespace);
 	    String url= getString(R.string.urlWS);
@@ -36,6 +39,7 @@ public class GruposActuadores extends Activity {
 	    	Long idPlaca= variables.getPlaca().getId();
 	    	listaGrupos = tarea.execute(idPlaca).get();
 			for (GrupoActuador_AM g : listaGrupos) {
+				//a partir de la lista obtenida carga la lista de datos para pasar a la vista
 				String estado;
 				if (g.getEstado().equals("E"))
 					estado= "Encendido";
@@ -61,13 +65,13 @@ public class GruposActuadores extends Activity {
 				}
 				else
 					datos.add(new ListaGrupoActuadores(R.drawable.grupo_actuadores, g.getNombre(), estado));
-
 			}
 		} catch (InterruptedException e) {
 			((Throwable) e).printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
+	    //carga la lista de datos en la vista
 	    lista = (ListView) findViewById(R.id.listViewGruposActuadores);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_grupos_actuadores, datos) {
 		@Override

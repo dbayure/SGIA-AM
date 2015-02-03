@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaFactores permite cargar los datos de un Factor para pasarlos en una lista a la vista
+ */
 public class ListaFactores {
 	
 	private int imagenFactor; 
@@ -37,6 +40,4 @@ public class ListaFactores {
 	public void setUnidadFactor(String unidadFactor) {
 		this.unidadFactor = unidadFactor;
 	} 
-	  
-	
 }

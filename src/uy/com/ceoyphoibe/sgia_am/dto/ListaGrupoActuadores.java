@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaGrupoActuadores permite cargar los datos de un GrupoActuadores para pasarlos en una lista a la vista
+ */
 public class ListaGrupoActuadores {
 	
 	private int imagenGrupoActuador; 
@@ -37,7 +40,4 @@ public class ListaGrupoActuadores {
 	public void setEstadoGrupoActuador(String estadoGrupoActuador) {
 		this.estadoGrupoActuador = estadoGrupoActuador;
 	}
-	
-	
-	
 }

@@ -18,6 +18,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 
+/**
+ * La clase WS_seleccionPlaca es una tarea asíncrona que se utiliza para invocar el servicio web mediante el que se obtiene la lista de placas controladoras disponibles en el sistema
+ */
 public class WS_seleccionPlaca extends AsyncTask<String, Integer, List<Placa_AM>> {
 
 	private String NAMESPACE = null;

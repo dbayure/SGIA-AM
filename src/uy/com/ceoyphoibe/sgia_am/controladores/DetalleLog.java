@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+/**
+ * La clase DetalleLog controla el activity para mostrar el detalle de un log de evento
+ */
 public class DetalleLog extends Activity {
 
 	private TextView fechaHora;
@@ -23,16 +26,15 @@ public class DetalleLog extends Activity {
 		setContentView(R.layout.activity_detalle_log);
 
 		final VariablesGlobales variables= (VariablesGlobales) getApplicationContext();
-	    LogEvento_AM logSeleccionado= variables.getLogEvento();
-	    
+	    //obtiene el log de evento seleccionado para ver el detalle
+		LogEvento_AM logSeleccionado= variables.getLogEvento();
+	    //obtiene cada uno de los parametros del log de evento
 	    fechaHora= (TextView) findViewById(R.id.detLog_fechaHora);
 	    nombreTipoLog= (TextView) findViewById(R.id.detLog_nombreTipoLog);
 	    smsMailTipoLog= (TextView) findViewById(R.id.detLog_smsMail);
 	    textoMensaje= (TextView) findViewById(R.id.detLog_textoMensaje);
 	    nombreDispositivo= (TextView) findViewById(R.id.detLog_nombreDispositivo);
-	    
 	    modeloDispositivo= (TextView) findViewById(R.id.detLog_modeloDispositivo);
-	    
 	    fechaHora.setText(logSeleccionado.getFechaHora().substring(0, 10) + " "+ logSeleccionado.getFechaHora().substring(11, 16));  
 	    nombreTipoLog.setText(logSeleccionado.getTipoLog().getNombre());
 	    String sms;
@@ -49,10 +51,7 @@ public class DetalleLog extends Activity {
 	    textoMensaje.setText(logSeleccionado.getMensaje().getTexto());
 	    nombreDispositivo.setText("Nombre: "+logSeleccionado.getDispositivo().getNombre());
 	    modeloDispositivo.setText("Modelo: "+logSeleccionado.getDispositivo().getModelo());
-	    
-	    
 	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

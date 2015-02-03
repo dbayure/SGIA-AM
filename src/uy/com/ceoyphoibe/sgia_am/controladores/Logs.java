@@ -18,6 +18,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase Logs controla el activity para mostrar la lista de logs de eventos
+ */
 public class Logs extends Activity {
 
 	private ListView lista;
@@ -31,24 +34,25 @@ public class Logs extends Activity {
 		String namespace= getString(R.string.namespace);
 	    String url= getString(R.string.urlWS);
 	    String method= getString(R.string.ws_listaLogEventos);
+	    //obtiene la lista de logs de eventos mediante el ws
 	    WS_listaLogEventos tarea = new WS_listaLogEventos(namespace, url, method);
 	    try {
 	    	final VariablesGlobales variables= (VariablesGlobales) getApplicationContext();
 	    	Long idPlaca= variables.getPlaca().getId();
 	    	listaLogEventos = tarea.execute((idPlaca)).get();
 	    	for (LogEvento_AM l : listaLogEventos) {
+	    		//a partir de la lista de logs obtenida carga la lista de datos para pasar a la vista
 	    		String nombreTipoLog= l.getTipoLog().getNombre();
 	    		String fechaHora= l.getFechaHora().substring(0, 10) + " "+ l.getFechaHora().substring(11, 16);
 	    		ListaLogs temp= new ListaLogs(nombreTipoLog, fechaHora);
 	    		datos.add(temp);	    		
 	    	}
-		    
 		} catch (InterruptedException e) {
 			((Throwable) e).printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
-	    
+	    //carga la lista de datos en la vista
 	    lista = (ListView) findViewById(R.id.listViewLogEventos);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_logs, datos) {
 		@Override
@@ -63,20 +67,19 @@ public class Logs extends Activity {
 				}
 			}
 		});
+		//asigna las acciones ante la selección de un elemento de la vista
 		lista.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-        
+            //asigna el log de evento seleccionado  como variable global
         	LogEvento_AM logSeleccionado= listaLogEventos.get(position);
             final VariablesGlobales variables= (VariablesGlobales) getApplicationContext();
             variables.setLogEvento(logSeleccionado);
-            	
+            //inicia el activity para visualización del detalle del log de evento seleccionado	
          	Intent newActivity0 = new Intent(Logs.this,DetalleLog.class);     
         	startActivity(newActivity0);
-
         }
       });
 	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

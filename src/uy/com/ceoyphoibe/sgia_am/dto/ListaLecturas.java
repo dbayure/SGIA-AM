@@ -1,5 +1,8 @@
 package uy.com.ceoyphoibe.sgia_am.dto;
 
+/**
+ * La clase ListaLecturas permite cargar los datos de una Lectura para pasarlos en una lista a la vista
+ */
 public class ListaLecturas {
 	
 	private String fecha; 
@@ -36,7 +39,4 @@ public class ListaLecturas {
 	public void setValor(String valor) {
 		this.valor = valor;
 	}
-	
-	
-	
 }

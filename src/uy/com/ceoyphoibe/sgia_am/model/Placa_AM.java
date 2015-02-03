@@ -2,13 +2,11 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 /**
- * Clase de apoyo utilizada para pasaje de datos de acciones con los servicios web 
+ * La clase Placa_AM contiene los parámetros relativos a una placa controladora
  */
 public class Placa_AM implements Serializable {
 
-
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private Long id;
 	private String estado;
 	private String nroSerie;
@@ -17,7 +15,6 @@ public class Placa_AM implements Serializable {
 	
 	
 	public Placa_AM() {
-		
 	}
 	
 	/**
@@ -35,62 +32,72 @@ public class Placa_AM implements Serializable {
 		this.descripcion = descripcion;
 		this.estadoAlerta = estadoAlerta;
 	}
+	
 	/**
-	 * @return the id
+	 * @return el identificador de la placa controladora
 	 */
 	public Long getId() {
 		return id;
 	}
+	
 	/**
-	 * @param id the id to set
+	 * @param id
 	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	/**
-	 * @return the estado
+	 * @return el estado de la placa
 	 */
 	public String getEstado() {
 		return estado;
 	}
+	
 	/**
-	 * @param estado the estado to set
+	 * @param estado
 	 */
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
 	/**
-	 * @return the nroSerie
+	 * @return el número de serie de la placa
 	 */
 	public String getNroSerie() {
 		return nroSerie;
 	}
+	
 	/**
-	 * @param nroSerie the nroSerie to set
+	 * @param nroSerie
 	 */
 	public void setNroSerie(String nroSerie) {
 		this.nroSerie = nroSerie;
 	}
+	
 	/**
-	 * @return the descripcion
+	 * @return la descripcion de la placa
 	 */
 	public String getDescripcion() {
 		return descripcion;
 	}
+	
 	/**
-	 * @param descripcion the descripcion to set
+	 * @param descripcion
 	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
 	/**
-	 * @return the estadoAlerta
+	 * @return el estadode alerta de la placa controladora
 	 */
 	public String getEstadoAlerta() {
 		return estadoAlerta;
 	}
+	
 	/**
-	 * @param estadoAlerta the estadoAlerta to set
+	 * @param estadoAlerta
 	 */
 	public void setEstadoAlerta(String estadoAlerta) {
 		this.estadoAlerta = estadoAlerta;

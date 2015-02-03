@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * La clase Lecturas controla el activity para mostrar la lista de las últimas diez lecturas del factor y placa controladora seleccionada
+ */
 public class Lecturas extends Activity {
 
 	private ListView lista;
@@ -32,7 +35,7 @@ public class Lecturas extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lecturas);
-
+		//obtiene y carga en la vista los atributos del factor seleccionado
 		imagenFactor= (ImageView) findViewById(R.id.imagenFactorLectura);
 		nombreFactor= (TextView) findViewById(R.id.nombreFactorLectura);
 		unidadFactor= (TextView) findViewById(R.id.unidadFactorLectura);
@@ -52,7 +55,7 @@ public class Lecturas extends Activity {
 			imagenFactor.setImageResource(R.drawable.luminosidad);
 		else if (factorSeleccionado.getNombre().equals("Amoniaco"))
 			imagenFactor.setImageResource(R.drawable.amoniaco);
-		
+		//obtiene la lista de lecturas mediante ws segun el factor seleccionado
 		ArrayList<ListaLecturas> datos = new ArrayList<ListaLecturas>();
 		String namespace= getString(R.string.namespace);
 	    String url= getString(R.string.urlWS);
@@ -76,7 +79,7 @@ public class Lecturas extends Activity {
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
-	    
+	    //carga la lista de datos en la vista
 	    lista= (ListView) findViewById(R.id.listaLecturas);
 		lista.setAdapter(new AdaptadorLista(this, R.layout.fragment_lecturas, datos) {
 		@Override

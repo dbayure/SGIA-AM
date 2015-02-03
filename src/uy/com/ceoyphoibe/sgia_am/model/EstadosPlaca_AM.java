@@ -3,18 +3,15 @@ package uy.com.ceoyphoibe.sgia_am.model;
 
 import java.io.Serializable;
 /**
- * Clase de apoyo utilizada para pasaje de los estados de la placa a la aplicación móvil
+ * La clase EstadosPlaca_AM contiene la información relativa al estado del sistema y el estado de alerta de la placa controladora
  */
 public class EstadosPlaca_AM implements Serializable {
 
-
 	private static final long serialVersionUID = -3135147364907375174L;
-
 	private String estadoSistema;
 	private String estadoAlerta;
 	
 	public EstadosPlaca_AM() {
-		
 	}
 
 	/**
@@ -27,31 +24,30 @@ public class EstadosPlaca_AM implements Serializable {
 	}
 
 	/**
-	 * @return the estadoSistema
+	 * @return el estado del sistema
 	 */
 	public String getEstadoSistema() {
 		return estadoSistema;
 	}
 
 	/**
-	 * @param estadoSistema the estadoSistema to set
+	 * @param estadoSistema
 	 */
 	public void setEstadoSistema(String estadoSistema) {
 		this.estadoSistema = estadoSistema;
 	}
 
 	/**
-	 * @return the estadoAlerta
+	 * @return el estado de alerta de la placa controladora
 	 */
 	public String getEstadoAlerta() {
 		return estadoAlerta;
 	}
 
 	/**
-	 * @param estadoAlerta the estadoAlerta to set
+	 * @param estadoAlerta
 	 */
 	public void setEstadoAlerta(String estadoAlerta) {
 		this.estadoAlerta = estadoAlerta;
 	}
-
 }
